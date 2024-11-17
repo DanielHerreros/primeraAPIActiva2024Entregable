@@ -9,6 +9,7 @@ const userRouter = Express.Router();
 userRouter.get("/", async (req: Express.Request, res: Express.Response) => {
     const result = await getAllUsers();
     res.json(result);
+    
   });
   
 userRouter.get("/:id", validateNumericParams, async (req: Express.Request, res: Express.Response) => {
