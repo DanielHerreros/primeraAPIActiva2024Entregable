@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="./src/frontend/validateUserForm.js"></script>
+    <title>Registro de usuario</title>
+</head>
+<body>
+    <form action="/api/v1/company" method="POST" id="userForm">
+        <p>
+            <label for="company-name-field">Nombre: </label>
+            <input type="text" name="company" id="company-name-field">
+        </p>
+        <p>
+            <label for="distributor-field">Distribuidor o mayorista: </label>
+            <input type="text" name="distributor" id="distributor-field">
+        </p>
+        <p>
+            <label for="contract-duration-field">Periodo de permanencia:</label>
+            <input type="text" name="contractDuration" id="contract-duration-field">
+        </p>
+        <p>
+            <label for="penalty-period-field">Meses de retrocomisión</label>
+            <input type="password" name="penaltyPeriod" id="penalty-period-field">
+        </p>
+        <p>
+            <label for="start_date">Fecha de alta:</label>
+            <input type="date" name="startDate" id="start_date">
+        </p>
+        <p>
+            <label for="active">Active:</label>
+            <select id="active" name="active" required>
+              <option value="true">Yes</option>
+              <option value="false">No</option>
+            </select>
+        </p>
+        <p>
+            <input type="submit" value="Registrar">
+        </p>
+    </form>
+</body>
+</html>
